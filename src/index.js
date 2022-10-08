@@ -1,2 +1,5 @@
 import "./index.html";
-import "./index.css";
+import "./index.scss";
+const sum = async (a, b) => {
+	return a + b;
+};

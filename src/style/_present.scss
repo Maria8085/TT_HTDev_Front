@@ -1,0 +1,79 @@
+.present {
+	width: 100%;
+	height: 352px;
+	background-color: $beige;
+	color: $white;
+
+	@include tablet {
+		height: 314px;
+	}
+
+	@include laptop {
+		height: 599px;
+	}
+
+	.logoWrap {
+		width: 167px;
+		height: 64.42px;
+		background-color: $blue2;
+		margin: 0 auto 54.58px;
+
+		@include laptop {
+			width: 267px;
+			height: 103px;
+			margin-left: 60px;
+			margin-bottom: 135.58px;
+		}
+
+		@include desktop {
+			margin-bottom: 115.58px;
+		}
+	}
+
+	.titleHeader {
+		font-size: 24px;
+		line-height: 24px;
+		margin: 0 0 22px;
+		padding: 0 10px;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: 400;
+
+		@include tablet {
+			font-size: 36px;
+			line-height: 40px;
+		}
+
+		@include laptop {
+			font-size: 72px;
+			line-height: 80px;
+			margin: 0 0 28px 40px;
+			text-align: unset;
+			padding: 0;
+		}
+
+		@include desktop {
+			margin: 0 0 15px 60px;
+		}
+	}
+
+	.paragraphBig {
+		font-size: 16px;
+		line-height: 20px;
+		padding: 0 10px;
+		margin: 0;
+		text-align: center;
+
+		@include laptop {
+			font-size: 26px;
+			line-height: 36px;
+			text-align: unset;
+			margin-left: 40px;
+			padding: 0;
+		}
+
+		@include desktop {
+			margin-left: 60px;
+		}
+	}
+}

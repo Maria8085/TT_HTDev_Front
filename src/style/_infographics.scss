@@ -1,0 +1,63 @@
+.infographics {
+    padding: 20px 16px 83px 14px;
+    background: $milk;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 237.21px;
+        height: 297.46px;
+        background: url("./image/whiteSpots.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        right: -131px;
+        bottom: -202px;
+        z-index: 1;
+    }
+
+    .titleInfograpgics {
+        margin: 0;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: $blue;
+        margin-bottom: 19px;
+    }
+
+    .paragraphInfograpgics {
+        margin: 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $beige;
+        margin-bottom: 8px;
+    }
+
+    .slideInfographics {
+        width: 260px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+
+        .imgInfographics {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .infoInfographics {
+            background: $beige2;
+
+            .textInfographics {
+                margin: 16px 10px;
+                color: $white;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+    }
+}

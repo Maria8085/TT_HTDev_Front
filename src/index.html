@@ -50,6 +50,7 @@
           </iframe>
         </div>
       </div>
+      <div class="milkLine"></div>
       <div class="products">
         <ul class="productsList">
           <li class="productItem">
@@ -64,19 +65,70 @@
           работать вместе, что бы лучше накормить и&nbsp;сохранить планету
         </p>
         <button class="buttonSite">
-          <a class="linkSite">Перейти на сайт</a>
+          <a class="linkSite" href="https://yandex.ru" target="_blank"
+            >Перейти на сайт</a
+          >
         </button>
       </div>
       <div class="advantages">
         <h3 class="titleAdvantages">Наши преимущества</h3>
-        <div class="slideAdvantages">
-          <img class="imgAdvantages" src="./image/presentFon@2x.jpeg" />
-          <div class="infoAdvantages">
-            <p class="textAdvantages">Уверенность в завтрашнем дне</p>
-            <button class="buttonAdvantages"></button>
+
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="slideAdvantages">
+                <img class="imgAdvantages" src="./image/presentFon@2x.jpeg" />
+                <div class="infoAdvantages">
+                  <p class="textAdvantages">
+                    Уверенность в&nbsp;завтрашнем дне
+                  </p>
+                  <p class="description">
+                    ООО «Conecom», российское подразделение французского
+                    концерна DuffBeer. Мы компания, которая честно ведет свой
+                    бизнес на территории РФ, соблюдая законодательство и
+                    гарантируя стабильность и уверенность в завтрашнем дне.
+                  </p>
+                </div>
+                <button class="buttonAdvantages"></button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slideAdvantages">
+                <img class="imgAdvantages" src="./image/presentFon@2x.jpeg" />
+                <div class="infoAdvantages">
+                  <p class="textAdvantages">
+                    Уверенность в&nbsp;завтрашнем дне
+                  </p>
+                </div>
+                <button class="buttonAdvantages"></button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slideAdvantages">
+                <img class="imgAdvantages" src="./image/presentFon@2x.jpeg" />
+                <div class="infoAdvantages">
+                  <p class="textAdvantages">
+                    Уверенность в&nbsp;завтрашнем дне
+                  </p>
+                </div>
+                <button class="buttonAdvantages"></button>
+              </div>
+            </div>
           </div>
+          <!-- If we need pagination -->
         </div>
-        <slider class="sliderAdvantages"></slider>
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <button class="button-prev">
+          <img class="img-button" src="./image/arrowPrev.svg" />
+        </button>
+        <button class="button-next">
+          <img class="img-button" src="./image/arrowNext.svg" />
+        </button>
       </div>
       <div class="infographics">
         <h3 class="titleInfograpgics">DuffBeer</h3>

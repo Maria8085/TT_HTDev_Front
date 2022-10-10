@@ -9,13 +9,30 @@
 
     @include laptop {
         flex-direction: row-reverse;
+        padding: 80px 22px 58px 0;
+
+    }
+
+    @include desktop {
+        padding: 100px 60px 98px 0;
     }
 
     .info {
         margin-bottom: 38px;
+        flex-shrink: 1;
 
         @include tablet {
             margin-bottom: 60px;
+        }
+
+        @include laptop {
+            flex-shrink: 1;
+            margin-left: 26px;
+            margin-bottom: 0;
+        }
+
+        @include desktop {
+            margin-left: 40px;
         }
 
         .experience {
@@ -24,7 +41,12 @@
             margin-bottom: 28px;
 
             @include tablet {
-                margin-bottom: 23px;
+                margin-bottom: 22 px;
+            }
+
+
+            @include laptop {
+                margin-bottom: 39px;
             }
 
             .value {
@@ -35,19 +57,41 @@
                 @include tablet {
                     margin-bottom: 11px;
                 }
+
+                @include laptop {
+                    width: 148px;
+                    height: 66px;
+                    margin-bottom: 28px;
+                }
             }
 
             .text {
                 width: 90px;
                 height: 6px;
+
+                @include laptop {
+                    width: 189px;
+                    height: 15px;
+                }
             }
         }
 
         .presentText {
             color: $beige;
+            font-weight: 400;
             font-size: 14px;
             line-height: 20px;
             margin: 0 0 10px;
+
+            @include laptop {
+                font-size: 18px;
+                line-height: 30px;
+                margin: 0 0 16px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -62,11 +106,29 @@
             margin-left: auto;
         }
 
+        @include laptop {
+            flex-grow: 1;
+            flex-shrink: 0;
+            width: 405.12px;
+            height: 271.26px;
+            margin-left: 41px;
+            margin-top: 60px;
+        }
+
+        @include desktop {
+            width: 545px;
+            height: 364.93px;
+            margin-left: 60px;
+            margin-top: 37px;
+        }
+
         .video {
             width: 100%;
             height: 100%;
             z-index: 2;
             position: absolute;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
         }
 
         &::before {
@@ -83,6 +145,31 @@
                 width: 96%;
                 height: 106%;
             }
+
+            @include laptop {
+                transform: translate(-41px, -27px);
+                width: 100%;
+                height: 100%;
+            }
+
+            @include desktop {
+                transform: translate(-35px, -37px);
+            }
         }
+    }
+}
+
+.milkLine {
+    display: none;
+    width: 100%;
+    height: 19px;
+    background-color: $milk;
+
+    @include laptop {
+        display: block;
+    }
+
+    @include desktop {
+        display: none;
     }
 }

@@ -4,6 +4,10 @@
     position: relative;
     overflow: hidden;
 
+    @include laptop {
+        padding: 95px 0 93px;
+    }
+
     &::after {
         position: absolute;
         content: "";
@@ -20,6 +24,18 @@
             right: 0px;
             bottom: -35px;
         }
+
+        @include laptop {
+            width: 436.68px;
+            height: 322.69px;
+            right: -280px;
+            bottom: -146px;
+        }
+
+        @include desktop {
+            right: -1px;
+            bottom: -149px;
+        }
     }
 
     .productsList {
@@ -33,6 +49,15 @@
             padding-left: 69px;
         }
 
+        @include laptop {
+            padding-left: 126px;
+            width: 650px;
+        }
+
+        @include desktop {
+            padding-left: 146px;
+        }
+
         .productItem {
             color: $white;
             margin: 0;
@@ -40,6 +65,16 @@
             font-weight: 400;
             font-size: 16px;
             line-height: 20px;
+            margin-bottom: 10px;
+
+            @include laptop {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
 
             &::before {
                 content: "";
@@ -48,12 +83,21 @@
                 height: 28px;
                 background: url(./image/arrow.svg);
                 position: absolute;
+                background-repeat: no-repeat;
+                background-size: cover;
                 left: -28px;
                 top: 2px;
 
                 @include tablet {
                     left: -49px;
                     top: 6px;
+                }
+
+                @include laptop {
+                    width: 47px;
+                    height: 60px;
+                    left: -85px;
+                    top: 1px;
                 }
             }
         }

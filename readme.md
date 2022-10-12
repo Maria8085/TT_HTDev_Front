@@ -16,4 +16,4 @@ npm run build
 yarn build
 ```
 
-{ссылка на макет](https://www.figma.com/file/tcp2JqjbxM31KdsEeW37w0/htdev-test?node-id=0%3A1)
+[ссылка на макет](https://www.figma.com/file/tcp2JqjbxM31KdsEeW37w0/htdev-test?node-id=0%3A1)

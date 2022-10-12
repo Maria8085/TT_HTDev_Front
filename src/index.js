@@ -18,17 +18,17 @@ function init() {
 		});
 	});
 	// init Swiper:
-	const swiper = new Swiper(".swiper", {
+	const advantagesSwiper = new Swiper(".advantages-swiper", {
 		// configure Swiper to use modules
 		modules: [Navigation, Pagination],
 		pagination: {
-			el: ".swiper-pagination",
+			el: ".advantages-pagination",
 			type: "bullets",
 			clickable: true,
 		},
 		navigation: {
-			nextEl: ".button-next",
-			prevEl: ".button-prev",
+			nextEl: ".advantages-button-next",
+			prevEl: ".advantages-button-prev",
 		},
 		breakpoints: {
 			320: {
@@ -42,6 +42,36 @@ function init() {
 			},
 			1020: {
 				enabled: false,
+				slidesPerView: "auto",
+			},
+		},
+	});
+	const infographicsSwiper = new Swiper(".infographics-swiper", {
+		// configure Swiper to use modules
+		modules: [Navigation, Pagination],
+		pagination: {
+			el: ".infographics-pagination",
+			type: "bullets",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".infographics-button-next",
+			prevEl: ".infographics-button-prev",
+		},
+		breakpoints: {
+			320: {
+				spaceBetween: 35,
+				slidesPerView: 1,
+			},
+			700: {
+				enabled: true,
+				spaceBetween: 25,
+				slidesPerView: 2,
+			},
+			1020: {
+				enabled: false,
+				spaceBetween: 0,
+				slidesPerView: "auto",
 			},
 		},
 	});

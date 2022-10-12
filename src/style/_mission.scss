@@ -11,6 +11,10 @@
     }
 
     @include laptop {
+        padding: 88px 0 101px;
+    }
+
+    @include desktop {
         padding: 84px 0 101px;
     }
 
@@ -19,9 +23,8 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        background-color: $beige;
         background-image: url("./image/field.jpeg");
-        background: linear-gradient(0deg, rgba(138, 123, 96, 0.42), rgba(138, 123, 96, 0.42)), image-set(url("./image/field.jpeg") 1x, url("./image/field@2x.jpeg") 2x);
+        background: linear-gradient(0deg, rgba(138, 123, 96, 0.42), rgba(138, 123, 96, 0.42)), no-repeat center/cover image-set(url("./image/field.jpeg") 1x, url("./image/field@2x.jpeg") 2x);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -48,11 +51,11 @@
         @include laptop {
             font-size: 48px;
             line-height: 80px;
-            margin: 0 auto 31px;
+            margin: 0 auto 29px;
         }
 
         @include desktop {
-            margin: 0 auto 35px;
+            margin: 0 auto 34px;
         }
 
         &::before,
@@ -108,29 +111,30 @@
         text-align: center;
         min-width: 260px;
         padding: 0 10px;
-        margin: 0 auto 29px;
+        margin: 0 auto 30px;
         width: auto;
 
         @include tablet {
-            width: 400px;
-            margin: 0 auto 11px;
+            width: 420px;
+            margin: 0 auto 10px;
         }
 
         @include laptop {
             font-size: 24px;
             line-height: 32px;
             margin: 0 auto 31px;
-            width: 585px;
+            width: 615px;
+
         }
 
         @include desktop {
             margin: 0 auto 38px;
-            width: 890px;
+            width: 910px;
         }
     }
 
     .buttonSite {
-        display: block;
+        display: flex;
         margin: 0 auto;
         padding: 0;
         border: none;
@@ -139,34 +143,33 @@
         background: $white;
         cursor: pointer;
 
+        color: $blue;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        text-decoration: none;
+        transition: 0.1s ease-out;
+
         @include tablet {
             width: 172px;
+            font-size: 14px;
+
         }
 
         @include laptop {
             width: 283px;
             height: 68px;
+            font-size: 18px;
         }
 
-        .linkSite {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            color: $blue;
-            align-items: center;
-            justify-content: center;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 28px;
-            text-decoration: none;
+        &:hover {
+            color: $beige;
+        }
 
-            @include tablet {
-                font-size: 14px;
-            }
-
-            @include laptop {
-                font-size: 18px;
-            }
+        &:active {
+            transform: scale(0.95);
         }
     }
 }

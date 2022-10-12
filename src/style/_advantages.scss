@@ -1,19 +1,19 @@
 .advantages {
-    padding: 50px 16px 0 14px;
+    padding: 50px 16px 40px 14px;
     background: $milk;
     position: relative;
     box-sizing: border-box;
 
     @include tablet {
-        padding: 61px 45px 20px 20px;
+        padding: 61px 45px 30px 20px;
     }
 
     @include laptop {
-        padding: 82px 16px 30px 40px;
+        padding: 80px 40px 40px 40px;
     }
 
     @include desktop {
-        padding: 100px 16px 53px 60px;
+        padding: 100px 60px 60px;
     }
 
     .titleAdvantages {
@@ -25,13 +25,13 @@
         margin: 0;
 
         @include tablet {
-            padding-bottom: 18px;
+            padding-bottom: 19px;
         }
 
         @include laptop {
             font-size: 40px;
             line-height: 60px;
-            padding-bottom: 31px;
+            padding-bottom: 32px;
         }
 
         @include desktop {
@@ -39,7 +39,21 @@
         }
     }
 
-    .swiper {
+    .advantages-swiper {
+        overflow: hidden;
+
+        .swiper-wrapper {
+            @include laptop {
+                display: grid;
+                gap: 20px 35px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include desktop {
+                gap: 32px 31px;
+            }
+        }
+
         .slideAdvantages {
             // width: 260px;
             overflow: hidden;
@@ -52,7 +66,15 @@
                 width: 100%;
                 height: 178px;
                 object-fit: cover;
-                margin-bottom: 98px;
+                margin-bottom: 106px;
+
+                @include laptop {
+                    margin-bottom: 165px;
+                }
+
+                @include desktop {
+                    margin-bottom: 139px;
+                }
             }
 
             .infoAdvantages {
@@ -60,31 +82,48 @@
                 position: absolute;
                 height: 100%;
                 width: 100%;
-                padding: 20px 20px 26px;
+                padding: 14px 14px 20px;
                 top: 0;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 background: $blue;
                 transition: 0.2s ease-out transform;
-                transform: translateY(calc(100% - 98px));
+                transform: translateY(calc(100% - 106px));
 
                 @include laptop {
-                    height: 118px;
                     padding: 17px 20px 26px;
+                    transform: translateY(calc(100% - 166px));
+                }
+
+                @include desktop {
+                    transform: translateY(calc(100% - 140px));
                 }
 
                 .textAdvantages {
                     position: absolute;
-                    margin: 0;
+                    width: 220px;
+                    margin: 6px;
                     font-weight: 400;
                     font-size: 14px;
                     line-height: 22px;
                     color: $white;
                     transition: 0.2s ease-out opacity;
 
+                    @include tablet {
+                        width: 250px;
+
+                    }
+
                     @include laptop {
                         font-size: 18px;
+                        width: 210px;
+                        margin: 4px 0;
+                    }
+
+                    @include desktop {
+                        width: 320px;
+
                     }
                 }
 
@@ -96,6 +135,10 @@
                     color: $white;
                     transition: 0.2s ease-out opacity;
                     display: none;
+
+                    @include desktop {
+                        font-size: 18px;
+                    }
                 }
             }
 
@@ -107,14 +150,24 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 border: none;
-                bottom: 10px;
-                right: 10px;
+                bottom: 19px;
+                right: 12px;
                 padding: 0;
                 align-self: flex-end;
                 transform: scale(1);
                 cursor: pointer;
                 transition: 0.2s ease-out transform;
                 transform-origin: center;
+
+                @include laptop {
+                    bottom: 23px;
+                    right: 13px;
+                }
+
+                @include desktop {
+                    bottom: 25px;
+                    right: 12px;
+                }
 
                 &:hover {
                     transform: scale(1.5);
@@ -143,87 +196,18 @@
                     }
                 }
             }
-
         }
-
-
     }
 
-    .button-prev,
-    .button-next {
-        width: 22px;
-        height: 33px;
-        padding: 10px;
-        border: none;
-        background: none;
+    .advantages-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
         position: absolute;
-        cursor: pointer;
-        z-index: 10;
-        top: 50%;
-
-        .img-button {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        &.swiper-button-disabled {
-            cursor: default;
-            opacity: 0.5;
-        }
-    }
-
-    .button-prev {
-        left: -0px;
-        padding-left: 0;
-    }
-
-    .button-next {
-        right: 0px;
-        padding-right: 0;
+        bottom: 12px;
+        left: 50%;
+        width: auto;
+        transform: translate(-50%);
 
         @include tablet {
-            right: 25px;
+            bottom: 1px;
         }
     }
-
-    &>.swiper-pagination {
-        margin-bottom: -28px;
-
-        .swiper-pagination-bullet {
-            width: 4px;
-            height: 4px;
-            background-color: unset;
-            padding: 4px;
-            margin: 0px;
-            border-radius: 0;
-
-            &::after {
-                position: relative;
-                width: 4px;
-                height: 4px;
-                content: "";
-                display: block;
-                background: rgba(138, 123, 96, 0.33);
-                border-radius: 100%;
-                transition: 0.2s ease-out transform;
-                transform-origin: center;
-            }
-
-            &:hover {
-                &::after {
-                    transform: scale(2);
-                }
-            }
-
-            &.swiper-pagination-bullet-active {
-                background-color: unset;
-
-                &::after {
-                    background-color: $blue;
-                }
-            }
-        }
-    }
-
 }

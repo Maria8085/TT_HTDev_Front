@@ -13,10 +13,8 @@
         content: "";
         width: 179px;
         height: 132px;
-        background: url("./image/blueSpots.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        right: -56px;
+        background: center / contain no-repeat image-set(url("./image/blueSpots.png") 1x, url("./image/blueSpots@2x.png") 2x);
+        right: -53px;
         bottom: -66px;
         z-index: 1;
 
@@ -70,6 +68,7 @@
             @include laptop {
                 font-size: 24px;
                 line-height: 32px;
+                width: 640px;
             }
 
             &:last-of-type {

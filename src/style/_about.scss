@@ -1,10 +1,10 @@
 .about {
-    padding: 50px 16px 50px 14px;
+    padding: 50px 16px 48px 14px;
     display: flex;
     flex-direction: column;
 
     @include tablet {
-        padding: 60px 20px;
+        padding: 60px 20px 58px;
     }
 
     @include laptop {
@@ -18,11 +18,11 @@
     }
 
     .info {
-        margin-bottom: 38px;
+        margin-bottom: 48px;
         flex-shrink: 1;
 
         @include tablet {
-            margin-bottom: 60px;
+            margin-bottom: 71px;
         }
 
         @include laptop {
@@ -41,7 +41,7 @@
             margin-bottom: 28px;
 
             @include tablet {
-                margin-bottom: 22 px;
+                margin-bottom: 22px;
             }
 
 
@@ -96,30 +96,30 @@
     }
 
     .videoWrap {
-        min-width: 260px;
-        min-height: 174.09px;
+        min-width: 263px;
+        min-height: 176.09px;
         position: relative;
 
         @include tablet {
-            width: 540.88px;
-            height: 361.28px;
+            width: 542.88px;
+            height: 364.28px;
             margin-left: auto;
         }
 
         @include laptop {
             flex-grow: 1;
             flex-shrink: 0;
-            width: 405.12px;
-            height: 271.26px;
-            margin-left: 41px;
-            margin-top: 60px;
+            width: 408.12px;
+            height: 275.26px;
+            margin-left: 39px;
+            margin-top: 58px;
         }
 
         @include desktop {
-            width: 545px;
-            height: 364.93px;
-            margin-left: 60px;
-            margin-top: 37px;
+            width: 549px;
+            height: 368.93px;
+            margin-left: 57px;
+            margin-top: 35px;
         }
 
         .video {
@@ -135,15 +135,13 @@
             content: "";
             position: absolute;
             background: #F7EEE5;
-            width: 100%;
-            height: 100%;
+            width: 96%;
+            height: 106%;
             transform: translate(-14px, -20px);
             z-index: 1;
 
             @include tablet {
                 transform: translate(-29px, -41px);
-                width: 96%;
-                height: 106%;
             }
 
             @include laptop {
@@ -156,13 +154,20 @@
                 transform: translate(-35px, -37px);
             }
         }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-bottom: 56.25%;
+        }
     }
 }
 
 .milkLine {
     display: none;
     width: 100%;
-    height: 19px;
+    height: 18px;
     background-color: $milk;
 
     @include laptop {
